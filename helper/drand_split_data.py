@@ -16,7 +16,7 @@ class split_data:
         test_all = pd.concat([pd.DataFrame(np.array(y_test), columns=['Brix']),
                               pd.DataFrame(np.array(X_test), columns=features)], axis=1)
 
-        train_test_path = get_path.save_csv()
+        train_test_path, _ = get_path.save_csv()
         all_data.to_csv(fr'{train_test_path}\all.csv', index=False, header=True, na_rep='Unknown')
         train_all.to_csv(fr'{train_test_path}\train.csv', index=False, header=True, na_rep='Unknown')
         test_all.to_csv(fr'{train_test_path}\test.csv', index=False, header=True, na_rep='Unknown')

@@ -6,7 +6,7 @@ class get_path:
 
     @staticmethod
     def data_sensor():
-        path = r'D:\Luan Van\data_sensor\2023-10-02'
+        path = r'D:\Quyt stacking regression\data\data_sensor'
         return path
 
     @staticmethod
@@ -22,5 +22,5 @@ class get_path:
     @staticmethod
     def save_csv():
         train_test_path = r'D:\Quyt stacking regression\data\train_test data'
-        file_data_export = r'D:\Luan Van\Data\Demo_Data'
+        file_data_export = r'D:\Quyt stacking regression\data\demo_data'
         return train_test_path, file_data_export

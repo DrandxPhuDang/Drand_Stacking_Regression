@@ -8,13 +8,13 @@ from helper.drand_get_data import get_data
 
 
 class training:
-    def __init__(self, path_data_all):
+    def __init__(self, path_data_all, start_col=12, test_size=0.2):
         super().__init__()
         # Lấy dữ liệu
-        X, y, features = get_data.get_X_y(path_data_all, start_col=12)
+        X, y, features = get_data.get_X_y(path_data_all, start_col=start_col)
 
         # Chia dữ liệu train_test
-        X_train, X_test, y_train, y_test = split_data.split(X, y, test_size=0.2, features=features)
+        X_train, X_test, y_train, y_test = split_data.split(X, y, test_size=test_size, features=features)
 
         # Chọn model cho huấn luyện mô hình hồi quy xếp chồng
         base_models = get_models.base_models()
